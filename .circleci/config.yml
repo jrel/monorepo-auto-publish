@@ -12,7 +12,7 @@ jobs:
           pkg-manager: yarn
           cache-path: ~/project/node_modules
           include-branch-in-cache-key: false
-      - run: yarn build -- --prod --project << parameters.project >>
+      - run: yarn build --project << parameters.project >>
       - run: yarn workspace << parameters.project >> semantic-release
     parameters:
       project:
