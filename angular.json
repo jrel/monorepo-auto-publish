@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "a": {
+    "@lib-publish-version/monorepo-a": {
       "projectType": "library",
       "root": "projects/a",
       "sourceRoot": "projects/a/src",
@@ -34,7 +34,7 @@
         }
       }
     },
-    "b": {
+    "@lib-publish-version/monorepo-b": {
       "projectType": "library",
       "root": "projects/b",
       "sourceRoot": "projects/b/src",
@@ -66,5 +66,5 @@
       }
     }
   },
-  "defaultProject": "a"
+  "defaultProject": "@lib-publish-version/monorepo-a"
 }
