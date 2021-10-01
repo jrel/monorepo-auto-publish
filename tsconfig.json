@@ -6,6 +6,10 @@
       "a": [
         "dist/a/a",
         "dist/a"
+      ],
+      "b": [
+        "dist/b/b",
+        "dist/b"
       ]
     },
     "baseUrl": "./",
