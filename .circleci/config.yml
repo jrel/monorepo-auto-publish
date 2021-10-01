@@ -12,18 +12,10 @@ jobs:
           pkg-manager: yarn
           cache-path: ~/project/node_modules
           include-branch-in-cache-key: false
-      - run: yarn build --project << parameters.project >>
-      - run: yarn workspace << parameters.project >> semantic-release
-    parameters:
-      project:
-        type: string
+      - run: yarn workspaces run ng build
+      - run: yarn workspaces run semantic-release
 
 workflows:
   release:
     jobs:
-      - release:
-          matrix:
-            parameters:
-              project:
-                - "@lib-publish-version/monorepo-a"
-                - "@lib-publish-version/monorepo-b"
+      - release
