@@ -8,11 +8,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "release":"semantic-release"
+    "release": "semantic-release"
   },
   "private": true,
-  "workspaces": ["projects/*"],
-
+  "workspaces": [
+    "projects/*"
+  ],
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
@@ -35,6 +36,12 @@
     "@angular-eslint/template-parser": "12.5.0",
     "@angular/cli": "~12.2.7",
     "@angular/compiler-cli": "~12.2.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^8.0.1",
+    "@semantic-release/npm": "^8.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.2",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
