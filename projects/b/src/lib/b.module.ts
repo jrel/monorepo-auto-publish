@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
+import { BComponent } from './components/b/b.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    BComponent
+  ],
   imports: [],
   exports: [],
 })
