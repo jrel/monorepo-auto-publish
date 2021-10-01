@@ -1,0 +1,29 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.7.0
+
+jobs:
+  release:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+          cache-path: ~/project/node_modules
+          include-branch-in-cache-key: false
+      - run: yarn build -- --prod --project << parameters.project >>
+      - run: yarn workspace << parameters.project >> semantic-release
+    parameters:
+      project:
+        type: string
+
+workflows:
+  release:
+    jobs:
+      - release:
+          matrix:
+            parameters:
+              project:
+                - "@lib-publish-version/monorepo-a"
+                - "@lib-publish-version/monorepo-b"
