@@ -12,7 +12,7 @@ jobs:
           pkg-manager: yarn
           cache-path: ~/project/node_modules
           include-branch-in-cache-key: false
-      - run: yarn workspaces run ng build
+      - run: node ./scripts/build.js  
       - run: yarn workspaces run semantic-release
 
 workflows:
